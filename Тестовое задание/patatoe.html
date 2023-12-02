@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/patatoe.css">
+    <script src="js/patatoe.js" ></script>
+    <title>Картошечка</title>
+</head>
+<body>
+    <div class = "first_screen">
+        <navigation>
+            <div class="potato-icon">
+                <img class = "potato-icone" src="css/assets/ikon2.png">
+            </div>
+            <section>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menu__box">
+                        <li><a class="menu__item" href="#prices" onclick="closeMenu()">Цены</a></li>
+                        <li><a class="menu__item" href="#video" onclick="closeMenu()">Видео</a></li>
+                        <li><a class="menu__item" href="#about_us" onclick="closeMenu()">О нас</a></li>
+                        <li><a class="menu__item" href="#application" onclick="closeMenu()">Оставить заявку</a></li>
+                        <p> КАРТОШЕЧКА </p>
+                        <img src="css/assets/foot_img_1.png">
+                    </ul>
+
+                </div>
+                <a class="a_sim" href="#prices">Цены</a>
+                <a class="a_sim" href="#video">Видео</a>
+                <a class="a_sim" href="#about_us">О нас</a>
+                <a class="appli" href="#application">Оставить заявку</a>
+            </section>
+        </navigation>
+        <h1 id="kkk"> КАРТОШЕЧКА </h1>
+        <h1 class="kar"> КА <br> РТО <br> ШЕЧ <br> КА </h1>
+    </div>
+    <div id = "prices">
+        <div class="text">
+            <h2> Цены </h2>
+            <div class="rectangle"></div>
+        </div>
+        <div class="choose">
+            <img src="css/assets/prev.png" class="switch" onClick="prev();">
+            <div id="derev_patatoe">
+                <img class="buys" src="css/assets/price1.jpg">
+                <p>Картофель по-деревенски</p>
+                <p class="rub">129 ₽</p>
+            </div>
+            <div id="stolov_patatoe">
+                <img class="buys" src="css/assets/price2.jpg">
+                <p>Столовая картошечка</p>
+                <p class="rub">142 ₽</p>
+            </div>
+            <div id="home_pot">
+                <img class="buys" src="css/assets/price3.jpg">
+                <p>Домашняя картошка</p>
+                <p class="rub">133 ₽</p>
+            </div>
+            <img src="css/assets/next.png" class="switch" onClick="next();">
+        </div>
+        <div class="mobi_switch">
+            <input type="radio" class="radio-circle" name="radio-group" id="radio1" checked>
+            <input type="radio" class="radio-circle" name="radio-group" id="radio2">
+            <input type="radio" class="radio-circle" name="radio-group" id="radio3">
+        </div>
+    </div>
+    <div id ="video">
+        <div class="big_rectangle">
+            <div class="text_video">
+                <h2> Видео </h2>
+                <div class="rectangle"></div>
+            </div>
+            <div class="media">
+                <img src="css/assets/play.png">
+            </div>
+        </div>
+    </div>
+    <div id ="about_us">
+        <img class ="fly_potat" src="css/assets/kartofan.png">
+        <img class = "fly_potat2" src="css/assets/kartofel2.png">
+        <div class="text">
+            <h2> О нас </h2>
+            <div class="rectangle"></div>
+        </div>
+        <div class="speach">
+            <img class="luk" src="css/assets/luk_bel.png">
+            <div class="speach_text">
+                <p>
+                    Этот урожай мы раздаем людям, потому что картошку я употребляю один раз в неделю,
+                    чтобы в хоккей можно было бегать и не растолстеть. Один,
+                    редко два раза в неделю я употребляю дома картофель. Сдерживаю себя искусственно,
+                    мы же бульбаши ("бульба" в переводе с белорусского языка "картофель" – Sputnik),
+                    да и казахи любят картофель не меньше нас. А если бы вы попробовали мой картофель,
+                    который на участке мы возделываем, тогда бы поняли, что такое настоящий картофель.
+                </p>
+            </div>
+        </div>
+        <div id="application">
+            <h3> Оставить заявку</h3>
+            <input type = "text" class="name" id="name_input" pattern="[А-Яа-я]+" oninput="validateInput(this)" placeholder="Имя">
+            <input type="tel" class="phone" id="phone_input" oninput="validatePhoneInput(this)" placeholder="Номер телефона">
+            <input type="submit" class="done" value="Оставить заявку" onclick="check();">
+        </div>
+        <footer>
+            <h4> Картошечка </h4>
+            <div class="foot_img" id ="foot_img">
+                  <img class = "foot_pic" src="css/assets/foot_img_1.png">
+            </div>
+            <div class="foot_img_2" id="foot_img_2">
+                <img class = "foot_pic" src="css/assets/foot_img_2.png" onClick="appl();">
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var i=0;
+        var derevBlock = document.getElementById("derev_patatoe");
+        var stolovBlock = document.getElementById("stolov_patatoe");
+        var homeBlock = document.getElementById("home_pot");
+        var img__1 = document.getElementById('foot_img');
+        var img__2 = document.getElementById('foot_img_2');
+
+        //переключение следующего или предыдущего для, выбор соц сети
+        function prev() {
+            if (i == 0) {
+                derevBlock.style.display = 'none';
+                homeBlock.style.display = 'block';
+                i = 2;
+            }
+            else if (i == 1) {
+                stolovBlock.style.display = 'none';
+                derevBlock.style.display = 'block';
+                i = 0;
+            }
+            else if (i == 2) {
+                homeBlock.style.display = 'none';
+                stolovBlock.style.display = 'block';
+                i = 1;
+            }
+        }
+        function next() {
+            if (i == 0) {
+                derevBlock.style.display = 'none';
+                stolovBlock.style.display = 'block';
+                i = 1;
+            }
+            else if (i == 1) {
+                stolovBlock.style.display = 'none';
+                homeBlock.style.display = 'block';
+                i = 2;
+            }
+            else if (i == 2) {
+                homeBlock.style.display = 'none';
+                derevBlock.style.display = 'block';
+                i = 0;
+            }
+        }
+        function appl() {
+            img__2.style.display = 'none';
+            img__1.style.display = 'block';
+        }
+
+        document.getElementById('radio1').addEventListener('change', function() {
+            document.getElementById('derev_patatoe').style.display = 'block'
+            document.getElementById('stolov_patatoe').style.display = 'none';
+            document.getElementById('home_pot').style.display = 'none';
+        });
+
+        document.getElementById('radio2').addEventListener('change', function() {
+            document.getElementById('derev_patatoe').style.display = 'none'
+            document.getElementById('stolov_patatoe').style.display = 'block';
+            document.getElementById('home_pot').style.display = 'none';
+        });
+
+        document.getElementById('radio3').addEventListener('change', function() {
+            document.getElementById('derev_patatoe').style.display = 'none'
+            document.getElementById('stolov_patatoe').style.display = 'none';
+            document.getElementById('home_pot').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

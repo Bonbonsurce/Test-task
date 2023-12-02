@@ -1,0 +1,37 @@
+1) Составьте список пользователей users, которые осуществили хотя бы один заказ orders в интернет магазине.
+
+SELECT users.id, users.name
+FROM users
+JOIN orders ON users.id = orders.user_id
+GROUP BY user_id;
+
+2) Выведите список товаров products и разделов catalogs, который соответствует товару.
+
+SELECT products.name, catalogs.name
+FROM products
+JOIN catalogs ON products.catalog_id = catalogs.id
+
+3) В базе данных shop и sample присутствуют одни и те же таблицы.
+   Переместите запись id = 1 из таблицы shop.users в таблицу sample.users. Используйте транзакции.
+
+START TRANSACTION;
+
+INSERT INTO sample.users (name, birthday_at, created_at, updated_at)
+SELECT name, birthday_at, created_at, updated_at
+FROM shop.users
+WHERE id = 1;
+
+DELETE FROM shop.users
+WHERE id = 1;
+COMMIT;
+ROLLBACK;
+
+4) Выведите одного случайного пользователя из таблицы shop.users, старше 30 лет, сделавшего минимум 3 заказа за последние полгода
+
+SELECT users.name
+FROM users
+JOIN orders ON users.id = orders.user_id
+WHERE DATEDIFF(CURDATE(), birthday_at) > 30 * 365.25 AND orders.created_at > DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
+GROUP BY user_id
+HAVING COUNT(orders.user_id) >= 3
+LIMIT 1;

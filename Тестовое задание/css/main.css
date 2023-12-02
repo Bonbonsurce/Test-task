@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Стили для блоков */
+.mem {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+tr, td {
+    border: black 1px solid;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    cursor: pointer;
+}
+add-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: #fff; /* Белый цвет текста */
+    border: none;
+    border-radius: 10px; /* Закругленные углы */
+    cursor: pointer;
+}

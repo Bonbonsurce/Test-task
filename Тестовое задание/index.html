@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" ></script>
+    <title>Олимпиада</title>
+</head>
+<body>
+    <div class="mem">
+        <h1>Олимпиада</h1>
+    </div>
+    <div class="mem">
+        <label for="members">Участники: </label>
+        <input type="text" id="members" name="memberes" pattern="[А-Яа-я,]+" oninput="validateInput(this)" placeholder="введите имена участников через запятую">
+        <button id="add_button" onclick="add()">Добавить</button>
+    </div>
+    <table id="data-table">
+        <thead>
+        <tr>
+            <th onclick="sortTable(0)">ID</th>
+            <th onclick="sortTable(1)">Name</th>
+            <th onclick="sortTable(2)">Points</th>
+
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</body>
+</html>

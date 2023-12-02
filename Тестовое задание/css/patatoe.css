@@ -1,0 +1,667 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-width: 90em;
+    font-family: 'Montserrat';
+}
+.hamburger-menu {
+    display: none;
+}
+.appli {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+section {
+    margin-right: 15em;
+}
+
+.appli:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
+navigation {
+    width: 98%;
+    display: flex;
+    margin-top: auto;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.choose {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switch {
+    height: 150px;
+    width: 100px;
+}
+.buys {
+    min-height: 400px;
+    min-width: 450px;
+    max-height: 400px;
+    max-width: 450px;
+}
+#prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rub {
+    color: #ECBA46;
+    font-family: Montserrat;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 85px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+#derev_patatoe, #stolov_patatoe, #home_pot {
+    flex: 1;
+}
+#derev_patatoe, #home_pot, #stolov_patatoe p {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#derev_patatoe {
+    display: block;
+    text-align: center;
+}
+
+#home_pot {
+    display: none;
+    text-align: center;
+    margin: 5px;
+}
+
+#stolov_patatoe p.rub {
+    color: #ECBA46;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 85px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#stolov_patatoe {
+    display: none;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.a_sim {
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 10px;
+    width: 68px;
+    height: 24px;
+    left: 1067px;
+    top: 63px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px;
+    color: #ffffff;
+}
+.a_sim:hover {
+    border-bottom: 3px solid orange;
+}
+.first_screen {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(200, 200, 0, 0.1), rgba(0, 0, 0, 0.7)), url('assets/patatoe.jpg') center/cover;
+    position: relative;
+}
+.first_screen,
+#prices,
+#video,
+#about_us {
+    width: 100%;
+    height: 1080px;
+}
+.potato-icone {
+    height: 100px;
+    width: 100px;
+    margin-left: 20vw;
+}
+
+h1 {
+    margin: auto;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 112px;
+    line-height: 137px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.first_screen h1 {
+    margin-bottom: 35vw;
+}
+h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: #000000;
+}
+.big_rectangle {
+    position: relative;
+    background-color: #35312D;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+}
+#video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text_video h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.text_video{
+    margin-bottom: 40px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text h2 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text{
+    margin-bottom: 40px;
+    padding-top: 0;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #201E1C;
+    width: 80%;
+    height: 70%;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.luk {
+    width: 500px;
+    height: 300px;
+}
+
+.rectangle {
+    width: 180px;
+    height: 10px;
+    background: #ECBA46;
+    padding: 0;
+}
+
+#about_us {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.speach {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.speach_text {
+    max-width: 25%;
+}
+
+.speach_text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+#application {
+    position: relative;
+    background-color: #35312D;
+    width: 60%;
+    height: 40%;
+    z-index: 1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+}
+#application h3 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+.name, .phone {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30%;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.name, .phone:hover {
+    border: 1px solid white;
+}
+.done {
+    border-radius: 20px;
+    background-color: #ECBA46;
+    height: 3em;
+    width: 14em;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.done:hover {
+    background-color: #FFD573;
+}
+
+h4 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+.fly_potat, .fly_potat2 {
+    height: 10em;
+    width: 15em;
+    rotate: 15deg;
+}
+.fly_potat2 {
+    position: absolute;
+    top: 250px;
+    left: 140px;
+}
+.foot_img {
+    display: block;
+}
+
+.foot_img_2 {
+    display: none;
+    margin-top: 40px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fly_potat {
+    position: absolute;
+    bottom: 400px;
+    right: 150px;
+}
+
+.foot_pic {
+    margin: auto;
+    height: 3em;
+    padding: 0;
+}
+.kar {
+    display: none;
+}
+.mobi_switch {
+    display: none;
+}
+.radio-circle {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    margin-bottom: 10px;
+}
+
+.radio-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+}
+
+.radio-circle:checked::before {
+    background-color: #ECBA46;
+}
+
+@media only screen and (max-width: 380px) {
+    body {
+        max-width: 380px;
+    }
+    .a_sim, .appli {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .first_screen,
+    #prices,
+    #video,
+    #about_us {
+        max-width: 380px;
+    }
+    #prices {
+        min-height: 450px;
+    }
+    #video {
+        height: 25em;
+    }
+    .big_rectangle {
+        width: 100%;
+        height: 100%;
+    }
+    .text_video h2 {
+        font-size: 30px;
+    }
+    .rectangle {
+        height: 5px;
+        width: 100px;
+    }
+    .media {
+        width: 70%;
+        height: 50%;
+    }
+    #application {
+        width: 100%;
+        border-radius: 0;
+    }
+    #application h3 {
+        font-size: 20px;
+        margin-bottom: 1em;
+    }
+    .name, .phone {
+        width: 70%;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .foot_pic, .foot_img_2 {
+        height: 40px;
+    }
+    .foot_img_2 {
+        margin: 0;
+    }
+    .done {
+        width: 50%;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+        background-color: black;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        background-color: black;
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+
+        transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 380px;
+        height: 800px;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: white;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+        transition-duration: .50s;
+    }
+    .menu__box img {
+        margin-left: 16px;
+        width: 10em;
+        height: 3em;
+    }
+    .menu__box p {
+        color: #333;
+        margin-top: 300px;
+        margin-left: 25px;
+        font-size: 20px;
+        font-weight: 600;
+
+        text-decoration: none;
+    }
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+    .potato-icone {
+        margin: 0;
+    }
+    .text h2 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 73px;
+        text-align: center;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        margin: 0;
+        display: none;
+    }
+    .first_screen, #prices {
+        height: auto;
+    }
+    .kar {
+        display: block;
+        text-align: left;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .rub {
+        font-size: 20px;
+        margin: 5px;
+        line-height: 20px;
+    }
+    #stolov_patatoe, #derev_patatoe, #home_pot {
+        min-height: 315px;
+    }
+    #stolov_patatoe, #derev_patatoe, #home_pot p {
+        font-size: 20px;
+        margin: 5px;
+    }
+    #derev_patatoe p {
+        margin: 5px;
+    }
+    #stolov_patatoe p.rub {
+        color: #ECBA46;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    #stolov_patatoe p {
+        font-family: Montserrat;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 15px;
+    }
+    .buys {
+        min-height: 200px;
+        min-width: 250px;
+        max-height: 200px;
+        max-width: 250px;
+    }
+    .switch {
+        height: 80px;
+        width: 50px;
+    }
+
+    #about_us {
+        height: auto;
+    }
+    .luk {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        z-index: -1;
+        opacity: 0.75;
+
+        background-size: cover;
+    }
+    .speach_text p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .speach_text {
+        max-width: 100%;
+    }
+
+    .fly_potat, .fly_potat2 {
+        display: none;
+    }
+    .switch {
+        display: none;
+    }
+    .mobi_switch {
+        display: block;
+        justify-content: space-around;
+    }
+}
+
